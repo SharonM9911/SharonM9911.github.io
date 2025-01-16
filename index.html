@@ -94,7 +94,7 @@
         document.getElementById('choiceForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const userInput = document.getElementById('choice').value.trim().toLowerCase();
-            const hiddenOptions = ['love', 'marry', 'married', "i love you, wardo, let's have a talk"];
+            const hiddenOptions = ['love', 'marry', 'married', 'sorry', "i love you, wardo, let's have a talk"];
             let result = '';
 
             if (hiddenOptions.some(option => userInput.includes(option))) {
