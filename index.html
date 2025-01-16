@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>选项选择程序</title>
+</head>
+<body>
+    <h1>代码写了十四行也不是情诗</h1>
+    <p>做出你的选择：</p>
+    <ul>
+        <li>a: 陪他一起去见广告商</li>
+        <li>b: 和他一起拉风投</li>
+        <li>c: 告诉他和温克莱沃斯兄弟案子的事情</li>
+        <li>d: 按时去机场接他</li>
+        <li>e: 邀请他来加州参加百万会员夜</li>
+    </ul>
+    <form id="choiceForm">
+        <label for="choice">你的选择是：</label>
+        <input type="text" id="choice" name="choice">
+        <input type="submit" value="提交">
+    </form>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('choiceForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const userInput = document.getElementById('choice').value.trim().toLowerCase();
+            const hiddenOptions = ['love', 'marry', 'married', "i love you, wardo, let's have a talk"];
+            let result = '';
+
+            if (hiddenOptions.some(option => userInput.includes(option))) {
+                result = "Come! We'll get married, and we'll live in one house together!";
+            } else if (['a', 'b', 'c', 'd', 'e'].includes(userInput)) {
+                result = "0.03%";
+            } else {
+                result = "sorry, but you can't do any thing to make them get together anymore";
+            }
+
+            document.getElementById('result').innerText = result;
+        });
+    </script>
+</body>
+</html>
