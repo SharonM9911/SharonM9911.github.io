@@ -41,7 +41,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-weight: bold;
+            font-weight: bolder
         }
         input[type="submit"]:hover {
             background-color: #ffffff;
@@ -86,11 +86,11 @@
             let result = '';
 
             if (hiddenOptions.some(option => userInput.includes(option))) {
-                result = "Come! We will get married, and we will live in a house together!";
+                result = "I love you! You are my best friend, come! And we'll get married, and we'll live in a house together!;
             } else if (['a', 'b', 'c', 'd', 'e'].includes(userInput)) {
                 result = "0.03%";
             } else {
-                result = "sorry, but you can't do any thing to make them get together anymore";
+                result = "sorry, but you can't do anything to make them get together anymore";
             }
 
             document.getElementById('result').innerText = result;
