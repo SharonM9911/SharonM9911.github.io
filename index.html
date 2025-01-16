@@ -29,6 +29,13 @@
             background-color: transparent;
             color: #fff;
             width: 200px;
+            line-height: 1.5; /* 调整行高 */
+            height: 24px; /* 固定高度 */
+            vertical-align: middle; /* 垂直对齐 */
+        }
+        label {
+            font-size: 16px;
+            line-height: 1.5; /* 确保行高一致 */
         }
         input[type="text"]:focus {
             outline: none;
@@ -41,7 +48,11 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-weight: bolder
+            font-weight: bolder;
+            font-size: 18px;
+            line-height: 1; /* 控制行高 */
+            height: 38px; /* 固定高度 */
+            width: auto; /* 根据需要调整宽度 */
         }
         input[type="submit"]:hover {
             background-color: #ffffff;
@@ -73,7 +84,7 @@
         <form id="choiceForm">
             <label for="choice">你的选择是：</label>
             <input type="text" id="choice" name="choice">
-            <input type="submit" value="提交">
+            <input type="submit" value="登录">
         </form>
         <p id="result"></p>
     </div>
